@@ -1,0 +1,36 @@
+<head>
+	<title>lyftChallenge</title>
+</head>
+
+<body>
+	<h1>Lyft Programming Challenge  <a href="https://github.com/jh2oman">(source code)</a></h1>
+	<h4>Propt</h4>
+	<p>Calculate the detour distance between two different rides. Given four latitude / longitude pairs, where driver one is traveling from point A to point B and driver two is traveling from point C to point D, write a function (in your language of choice) to calculate the shorter of the detour distances the drivers would need to take to pick-up and drop-off the other driver.</p>
+
+	<h4>My Solution</h4>
+	<p>I conclued that there were two possible solutions that must be considered: the route ACBD or the route CABD. I calculate these distances with the help of Google Maps API.</p>
+
+	<h4>Directions</h4>
+	<p>Drop pins on the map in the order A, B, C, then D. Press calculate to calculate which route is the better one to take.</p>
+
+	<button id="calculate" disabled="true">Calculate</button>
+	<div id="results" hidden>
+		<div>
+			Route ACBD: <span id="dist1"> N/A</span>
+		</div>
+		<div>
+			Route CABD: <span id="dist2"> N/A</span>
+		</div>
+	</div>
+	<div id="map" ></div>
+	<button id="reset">Reset</button>
+	<script
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDrhJCRV06mysDpW25HhK1Cc49f-O79F-Y&signed_in=false&callback=initMap"
+	async defer>
+	</script>
+</body>
+
+<template name="hello">
+	<button>Click Me</button>
+	<p>You've pressed the button {{counter}} times.</p>
+</template>
